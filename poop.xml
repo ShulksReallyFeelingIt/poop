@@ -11,8 +11,8 @@
         <statement name="DO">
           <block type="oled_cleardisplay" id="435">
             <next>
-              <block type="oled_color" id="450">
-                <field name="OBJECT">GREEN</field>
+              <block type="oled_drawtext" id="459">
+                <field name="TEXT">blue</field>
               </block>
             </next>
           </block>
