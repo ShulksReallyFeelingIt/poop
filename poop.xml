@@ -1,23 +1,22 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="594" x="-26" y="-21">
+  <block type="oled_cleardisplay" id="380" x="-17" y="10">
     <next>
-      <block type="robot_delay" id="605" inline="true">
-        <value name="DELAY">
-          <block type="math_number" id="612">
-            <field name="NUM">3000</field>
+      <block type="controls_repeat" id="629" inline="true">
+        <value name="TIMES">
+          <block type="math_number" id="636">
+            <field name="NUM">20</field>
           </block>
         </value>
-        <next>
-          <block type="oled_cleardisplay" id="380">
+        <statement name="DO">
+          <block type="movement_forward" id="594">
             <next>
-              <block type="controls_whileUntil" id="396" inline="false">
-                <field name="MODE">UNTIL</field>
-                <value name="NUMBER">
-                  <block type="sensor_button" id="426">
-                    <field name="OBJECT">UP</field>
+              <block type="robot_delay" id="605" inline="true">
+                <value name="DELAY">
+                  <block type="math_number" id="612">
+                    <field name="NUM">20</field>
                   </block>
                 </value>
-                <statement name="DO">
+                <next>
                   <block type="oled_cleardisplay" id="435">
                     <next>
                       <block type="oled_drawtext" id="459">
@@ -80,11 +79,11 @@
                       </block>
                     </next>
                   </block>
-                </statement>
+                </next>
               </block>
             </next>
           </block>
-        </next>
+        </statement>
       </block>
     </next>
   </block>
